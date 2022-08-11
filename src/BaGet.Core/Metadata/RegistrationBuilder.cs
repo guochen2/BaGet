@@ -64,6 +64,7 @@ namespace BaGet.Core
                 PackageContentUrl = _url.GetPackageDownloadUrl(package.Id, package.Version),
                 PackageMetadata = new BaGetPackageMetadata
                 {
+                    CatalogLeafUrl = _url.GetPackageDownloadUrl(package.Id, package.Version),
                     PackageId = package.Id,
                     Version = package.Version.ToFullString(),
                     Authors = string.Join(", ", package.Authors),
